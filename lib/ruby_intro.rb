@@ -4,14 +4,21 @@
 
 def sum arr
   # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  arr.max(2).sum
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  #two elements of arr add up to n
+  return false if arr.empty? #if array is empty return false for any n
+  # create every permutation of 2 
+  #see if any meet the requirement by passing a block
+  arr.permutation(2).any? {|a,b| a+b == n} 
 end
 
 # Part 2
